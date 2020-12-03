@@ -1,0 +1,163 @@
+@import 'bgrid-framework.v1.css';
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700;900&display=swap');
+
+:root {
+  --bg-color: #6e61c6;
+}
+/*ULTILIZA O NOME DA CLASSE PARA COMPOR O LAYOU. DESCONSIDERAR EM PRODUÇÃO*/
+/* .grid-container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}  */
+sup {
+  color: #d44343;
+  font-size: 21px;
+}
+.description {
+  color: #fff;
+  text-align: center;
+  color: #211869;
+}
+h1, h2, h3, h4, h5 {
+  color: #fff;
+}
+textarea {
+  border: none;
+  margin: 0 auto;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Titillium Web', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bg-color);
+}
+header {
+  padding: 2rem 0 2rem;
+  background: #fff;
+}
+header h1 {
+  text-align: center;
+  color: var(--bg-color);
+  font-size: 4rem;
+}
+.example {
+  margin: 60px 0;
+  color: var(--bg-color);
+}
+
+.letter {
+  padding: 8px 16px;
+  margin: 0 4px 0 12px;
+  border-radius: 4px;
+  border: 2px solid var(--bg-color);
+  color: var(--bg-color);
+}
+
+/**/
+.container {
+  max-width: var(--content-max-size);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.grid-container {
+  height: 100%;
+  margin: 0;
+}
+.grid-container * {
+  position: relative;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(0fr, 1fr) minmax(0fr, 1fr) minmax(0fr, 1fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "section1 section1 section1 section1"
+
+    "section2 section2 section2 section2"
+
+    "section3 section3 section3 section3";
+}
+
+.section1 {
+  grid-area: section1;
+  margin: 15px 0;
+}
+
+.section2 {
+  grid-area: section2;
+  margin: 15px 0;
+}
+.section3 {
+  grid-area: section3;
+  margin: 15px 0;
+}
+
+.content-col {
+  background: #fff;
+  padding: 1rem 0;
+  border-radius: 2px;
+}
+.content-col p {
+  color: #cacaca;
+  text-align: center;
+  min-height: 1.5rem;
+}
+.bg-fade {
+  min-height: 10px;
+  background-color: #19bc9d;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: 1;
+  animation-name: example;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes example {
+  0% {
+      background-color: #e91e63;
+  }
+  25% {
+      background-color: rgb(199, 86, 41);
+  }
+  50% {
+      background-color: #972297;
+  }
+  75% {
+      background-color: #c91c87;
+  }
+  100% {
+      background-color: #e91e63;
+  }
+}
+
+@keyframes example {
+  0% {
+    background-color: #e91e63;
+}
+25% {
+    background-color: rgb(199, 86, 41);
+}
+50% {
+    background-color: #972297;
+}
+75% {
+    background-color: #c91c87;
+}
+100% {
+    background-color: #e91e63;
+}
+}
+
