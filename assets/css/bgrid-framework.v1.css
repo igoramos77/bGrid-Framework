@@ -1,18 +1,17 @@
 /*
-
 bGrid v1.0
 ## DESENVOLVIDO POR IGOR BROWN
 ## ENGENHARIA DE SOFTWARE - UNIVERSIDADE DE VASSOURAS
 ## 2020 
-
 */
 
 
 /*VARIABLES*/
 :root {
-  --content-max-size: 1040px;
-  --default-pr: 1rem;
-  --default-pl: 1rem;
+  /* --content-max-size: 1040px; */
+  --content-max-size: 95%;
+  --default-pr: .5rem;
+  --default-pl: .5rem;
 }
 
 /*TEXT ALIGN BASIC */
@@ -25,7 +24,7 @@ bGrid v1.0
 }
 .right {
   justify-content: flex-end;
-    text-align: end;
+  text-align: end;
 }
 .left {
   justify-content: flex-start;
@@ -33,12 +32,15 @@ bGrid v1.0
 }
 .middle {
   align-items: center;
+  display: flex;
 }
 .top {
   align-items: flex-start;
+  display: flex;
 }
 .bottom {
   align-items: flex-end;
+  display: flex;
 }
 /*GRID FRAMEWORK*/
 .container {
@@ -46,7 +48,7 @@ bGrid v1.0
   margin: 0 auto;
   padding-right: var(--default-pr);
   padding-left: var(--default-pl);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 .row {
   display: flex;
@@ -86,6 +88,11 @@ bGrid v1.0
 .col-d-30 {
   flex:30%;
   max-width: 30%;
+}
+/* 1/3 DE 100% */
+.col-d-33 {
+  flex:33.33%;
+  max-width: 33.33%;
 }
 .col-d-35 {
   flex:35%;
@@ -143,6 +150,9 @@ bGrid v1.0
   flex:100%;
   max-width: 100%;
 }
+.d-dnone {
+  display: none !important;
+}
 
 /* TABLET */
 @media (min-width: 481px) and (max-width: 767px) {
@@ -169,6 +179,11 @@ bGrid v1.0
   .col-t-30 {
     flex:30% !important;
     max-width: 30% !important;
+  }
+  /* 1/3 DE 100% */
+  .col-t-33 {
+    flex:33.33% !important;
+    max-width: 33.33% !important;
   }
   .col-t-35 {
     flex:35% !important;
@@ -226,6 +241,9 @@ bGrid v1.0
     flex:100% !important;
     max-width: 100% !important;
   }
+  .t-dnone {
+    display: none !important;
+  }
 }
 
 /* MOBILE */
@@ -253,6 +271,11 @@ bGrid v1.0
   .col-m-30 {
     flex:30% !important;
     max-width: 30% !important;
+  }
+  /* 1/3 DE 100% */
+  .col-m-33 {
+    flex:33.33% !important;
+    max-width: 33.33% !important;
   }
   .col-m-35 {
     flex:35% !important;
@@ -310,4 +333,21 @@ bGrid v1.0
     flex:100% !important;
     max-width: 100% !important;
   }
+  .m-dnone {
+    display: none !important;
+  }
+}
+
+/* NO PADDING - NO MARGIN */
+.no-padding {
+  padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+
+/* IMG RESPONSIVE */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
