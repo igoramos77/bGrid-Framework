@@ -14,6 +14,10 @@ bGrid v1.0
   --default-pl: .5rem;
 }
 
+.d-flex {
+  display: flex;
+}
+
 /*TEXT ALIGN BASIC */
 .text-center {
   text-align: center;
